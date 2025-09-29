@@ -1,0 +1,388 @@
+/* Основные стили */
+body {
+    font-family: 'DrukCyr', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #232323;
+    background-color: #f6f5fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #950103;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #550000;
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 20px;
+}
+
+/* Шапка */
+.header {
+    background-color: rgba(149, 1, 3, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.header__logo a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header__nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header__nav li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.header__nav a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.header__nav a:hover {
+    color: #232323;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f5fa;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #232323;
+    padding: 12px 16px;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.header__contacts {
+    display: flex;
+    align-items: center;
+}
+
+.header__contacts a {
+    margin-left: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Герой секция */
+.hero {
+    padding: 180px 0 100px;
+    text-align: center;
+    background-color: #f6f5fa;
+}
+
+.hero h1 {
+    font-size: 144px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #950108;
+}
+
+.hero h2 {
+    font-size: 144px;
+    line-height: 1;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.tag {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #e2e2e2;
+    border-radius: 12px;
+    padding: 10px 20px;
+    margin: 10px;
+    transform: rotate(-10deg);
+    backdrop-filter: blur(5px);
+}
+
+/* Процесс работы */
+.process {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.process h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.process-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #f6f5fa;
+    border-radius: 7px;
+    box-shadow: 0px 0px 13px 0px rgba(35,35,35,0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+}
+
+.step img {
+    width: 24px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.step p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.arrow {
+    width: 72px;
+    height: auto;
+    margin: 0 10px;
+}
+
+/* Услуги и доставка */
+.services, .delivery {
+    padding: 100px 0;
+}
+
+.services h2, .delivery h2 {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.services-grid, .delivery-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service, .method {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service h3, .method h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+/* Контакты */
+.contacts {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contacts h2 {
+    font-size: 48px;
+    margin-bottom: 60px;
+}
+
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Подвал */
+.footer {
+    background-color: #232323;
+    color: #ffffff;
+    padding: 50px 0;
+}
+
+.footer__info {
+    margin-bottom: 30px;
+}
+
+.footer__logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer__links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.footer__contacts a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Попап форма */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup__content {
+    background-color: #f6f5fa;
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+.popup__close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    color: #232323;
+    text-decoration: none;
+}
+
+.popup h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #c9c9c9;
+    border-radius: 12px;
+    font-size: 16px;
+}
+
+.form-note {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-note a {
+    color: #950103;
+}
+
+/* Адаптивность */
+@media (max-width: 1199px) {
+    .hero h1, .hero h2 {
+        font-size: 123px;
+    }
+}
+
+@media (max-width: 959px) {
+    .hero {
+        padding-top: 150px;
+    }
+    
+    .hero h1, .hero h2 {
+        font-size: 84px;
+    }
+    
+    .process-steps {
+        flex-direction: column;
+    }
+    
+    .arrow {
+        transform: rotate(90deg);
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 639px) {
+    .hero h1, .hero h2 {
+        font-size: 63px;
+    }
+    
+    .header__nav {
+        display: none;
+    }
+}
+
+@media (max-width: 479px) {
+    .hero h1, .hero h2 {
+        font-size: 47px;
+    }
+    
+    .btn-large {
+        width: 100%;
+        text-align: center;
+    }
+}

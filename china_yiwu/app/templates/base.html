@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Твой надежный посредник из Китая{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', path='/img/favicon.ico') }}" type="image/x-icon">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href=""><strong>PANDA LOGISTIC</strong></a>
+            </div>
+            <nav class="header__nav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">О компании</a></li>
+                    <li class="dropdown">
+                        <a href="#">Услуги</a>
+                        <div class="dropdown-content">
+                            <a href="#">Выкуп товара</a>
+                            <a href="#">Инспекция товара</a>
+                            <a href="#">Поиск поставщиков</a>
+                            <a href="#">Фулфилмент в Китае</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#">Доставка</a>
+                        <div class="dropdown-content">
+                            <a href="#">Автодоставка</a>
+                            <a href="#">Доставка морем</a>
+                            <a href="#">Жд доставка</a>
+                            <a href="#">Авиадоставка</a>
+                        </div>
+                    </li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header__contacts">
+                <a href="tel:+79531024246" class="phone-icon"></a>
+                <a href="mailto:kunshu@bk.ru" class="email-icon"></a>
+                <a href="https://wa.me/79531024246" class="whatsapp-icon"></a>
+                <a href="https://t.me/Toretto_in_China" class="telegram-icon"></a>
+                <a href="#popup-form" class="btn">Оставить заявку</a>
+            </div>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__info">
+                <div class="footer__logo">PANDA LOGISTIC</div>
+                <p>Твой надежный партнер из Китая</p>
+            </div>
+            <div class="footer__links">
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+            <div class="footer__contacts">
+                <a href="tel:+79098010888">+7 909 801 08 88</a>
+                <a href="tel:+8613128619478">+86 131 28 61 9478</a>
+                <a href="info@pandalogist.ru">info@pandalogist.ru</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Попап форма -->
+    <div id="popup-form" class="popup">
+        <div class="popup__content">
+            <a href="#" class="popup__close">&times;</a>
+            <h2>Заявка менеджеру</h2>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Телефон" required>
+                </div>
+                <button type="submit" class="btn">Оставить заявку</button>
+            </form>
+            <p class="form-note">Отправляя заявку вы соглашаетесь на <a href="#">обработку персональных данных</a></p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
